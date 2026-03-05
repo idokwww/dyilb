@@ -28,6 +28,10 @@ uint64_t kfd_get_syscall_table(void) {
     return 0;
 }
 
+uint64_t kfd_get_vfs_mount_table(void) {
+    return 0;
+}
+
 uint64_t kfd_get_sandbox_policy(int pid) {
     return 0;
 }
