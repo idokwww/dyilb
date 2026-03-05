@@ -70,7 +70,7 @@
 				83B67FAC2B5A4F2D00E3D36F /* KFDManager.swift */,
 				83B67FAE2B5A4F4B00E3D36F /* JailbreakDetector.swift */,
 				83B67FB02B5A4F5C00E3D36F /* TrollDetector.swift */,
-				83B67FB2B5A4F6800E3D36F /* DeviceInfoReader.swift */,
+				83B67FB22B5A4F6800E3D36F /* DeviceInfoReader.swift */,
 				83B67FB42B5A4F7600E3D36F /* ReportGenerator.swift */,
 			);
 			sourceTree = "<group>";
@@ -182,8 +182,6 @@
 				DEVELOPMENT_TEAM = "";
 				CODE_SIGNING_REQUIRED = NO;
 				CODE_SIGNING_ALLOWED = NO;
-				CC = "$(CLANG)";
-				CFLAGS = "$(inherited) -Wno-error=implicit-function-declaration";
 			};
 			name = Debug;
 		};
@@ -245,8 +243,6 @@
 				DEVELOPMENT_TEAM = "";
 				CODE_SIGNING_REQUIRED = NO;
 				CODE_SIGNING_ALLOWED = NO;
-				CC = "$(CLANG)";
-				CFLAGS = "$(inherited) -Wno-error=implicit-function-declaration";
 			};
 			name = Release;
 		};
