@@ -16,13 +16,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		83B67FAC2B5A4F2D00E3D36F /* KFDManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFDManager.swift; sourceTree = "<group>"; };
-		83B67FAE2B5A4F4B00E3D36F /* JailbreakDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JailbreakDetector.swift; sourceTree = "<group>"; };
-		83B67FB02B5A4F5C00E3D36F /* TrollDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrollDetector.swift; sourceTree = "<group>"; };
-		83B67FB22B5A4F6800E3D36F /* DeviceInfoReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfoReader.swift; sourceTree = "<group>"; };
-		83B67FB42B5A4F7600E3D36F /* ReportGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportGenerator.swift; sourceTree = "<group>"; };
-		83B67FB62B5A4F8300E3D36F /* kfd.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c; path = kfd.c; sourceTree = "<group>"; };
-		83B67FB82B5A4F9000E3D36F /* kfd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kfd.h; sourceTree = "<group>"; };
+		83B67FAC2B5A4F2D00E3D36F /* KFDManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceChecker/KFDManager.swift; sourceTree = "<group>"; };
+		83B67FAE2B5A4F4B00E3D36F /* JailbreakDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceChecker/JailbreakDetector.swift; sourceTree = "<group>"; };
+		83B67FB02B5A4F5C00E3D36F /* TrollDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceChecker/TrollDetector.swift; sourceTree = "<group>"; };
+		83B67FB22B5A4F6800E3D36F /* DeviceInfoReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceChecker/DeviceInfoReader.swift; sourceTree = "<group>"; };
+		83B67FB42B5A4F7600E3D36F /* ReportGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceChecker/ReportGenerator.swift; sourceTree = "<group>"; };
+		83B67FB62B5A4F8300E3D36F /* kfd.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c; path = DeviceChecker/kfd.c; sourceTree = "<group>"; };
+		83B67FB82B5A4F9000E3D36F /* kfd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceChecker/kfd.h; sourceTree = "<group>"; };
 		83B67FBB2B5A4FA000E3D36F /* libDeviceCheckerDylib.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libDeviceCheckerDylib.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
