@@ -91,6 +91,16 @@
 				83B67FBC2B5A4FA100E3D36F /* Sources */,
 				83B67FBD2B5A4FA200E3D36F /* Frameworks */,
 			);
+			buildRules = (
+				{
+					isa = PBXBuildRule;
+					compilerSpec = com.apple.compilers.llvm.clang.1_0;
+					filePatterns = "*.c";
+					isEditable = 1;
+					outputFiles = (
+					);
+				};
+			);
 			dependencies = (
 			);
 			name = DeviceCheckerDylib;
