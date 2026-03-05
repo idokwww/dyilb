@@ -12,7 +12,6 @@
 		83B67FB12B5A4F5C00E3D36F /* TrollDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B67FB02B5A4F5C00E3D36F /* TrollDetector.swift */; };
 		83B67FB32B5A4F6800E3D36F /* DeviceInfoReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B67FB22B5A4F6800E3D36F /* DeviceInfoReader.swift */; };
 		83B67FB52B5A4F7600E3D36F /* ReportGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B67FB42B5A4F7600E3D36F /* ReportGenerator.swift */; };
-		83B67FB72B5A4F8300E3D36F /* kfd.c in Sources */ = {isa = PBXBuildFile; fileRef = 83B67FB62B5A4F8300E3D36F /* kfd.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,8 +20,6 @@
 		83B67FB02B5A4F5C00E3D36F /* TrollDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceChecker/TrollDetector.swift; sourceTree = "<group>"; };
 		83B67FB22B5A4F6800E3D36F /* DeviceInfoReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceChecker/DeviceInfoReader.swift; sourceTree = "<group>"; };
 		83B67FB42B5A4F7600E3D36F /* ReportGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceChecker/ReportGenerator.swift; sourceTree = "<group>"; };
-		83B67FB62B5A4F8300E3D36F /* kfd.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c; path = DeviceChecker/kfd.c; sourceTree = "<group>"; };
-		83B67FB82B5A4F9000E3D36F /* kfd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceChecker/kfd.h; sourceTree = "<group>"; };
 		83B67FBB2B5A4FA000E3D36F /* libDeviceCheckerDylib.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libDeviceCheckerDylib.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -46,7 +43,6 @@
 				83B67FB12B5A4F5C00E3D36F /* TrollDetector.swift in Sources */,
 				83B67FB32B5A4F6800E3D36F /* DeviceInfoReader.swift in Sources */,
 				83B67FB52B5A4F7600E3D36F /* ReportGenerator.swift in Sources */,
-				83B67FB72B5A4F8300E3D36F /* kfd.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,8 +72,6 @@
 				83B67FB02B5A4F5C00E3D36F /* TrollDetector.swift */,
 				83B67FB2B5A4F6800E3D36F /* DeviceInfoReader.swift */,
 				83B67FB42B5A4F7600E3D36F /* ReportGenerator.swift */,
-				83B67FB62B5A4F8300E3D36F /* kfd.c */,
-				83B67FB82B5A4F9000E3D36F /* kfd.h */,
 			);
 			sourceTree = "<group>";
 		};

@@ -14,10 +14,8 @@ class KFDManager {
         let majorVersion = Int(osVersion.components(separatedBy: ".")[0]) ?? 0
         
         if majorVersion >= 14 && majorVersion <= 16 {
-            isInitialized = kfd_initialize()
-            if isInitialized {
-                hasKernelAccess = kfd_get_kernel_access()
-            }
+            isInitialized = true
+            hasKernelAccess = false // 模拟没有内核访问权限
         }
     }
     
@@ -29,82 +27,55 @@ class KFDManager {
         if !hasKernelAccess {
             return nil
         }
-        
-        var buffer = [UInt8](repeating: 0, count: size)
-        let success = kfd_read_kernel_memory(addr, &buffer, size)
-        if success {
-            return Data(buffer)
-        }
-        return nil
+        return Data()
     }
     
     func writeKernelMemory(addr: UInt64, data: Data) -> Bool {
         if !hasKernelAccess {
             return false
         }
-        
-        return data.withUnsafeBytes { buffer in
-            if let baseAddress = buffer.baseAddress {
-                let uint8Buffer = baseAddress.assumingMemoryBound(to: UInt8.self)
-                return kfd_write_kernel_memory(addr, uint8Buffer, data.count)
-            }
-            return false
-        }
+        return false
     }
     
     func getProcStruct(pid: Int) -> UInt64? {
         if !hasKernelAccess {
             return nil
         }
-        return kfd_get_proc_struct(pid)
+        return 0
     }
     
     func getSyscallTable() -> UInt64? {
         if !hasKernelAccess {
             return nil
         }
-        return kfd_get_syscall_table()
+        return 0
     }
     
     func getVFSMountTable() -> UInt64? {
         if !hasKernelAccess {
             return nil
         }
-        return kfd_get_vfs_mount_table()
+        return 0
     }
     
     func getSandboxPolicy(pid: Int) -> UInt64? {
         if !hasKernelAccess {
             return nil
         }
-        return kfd_get_sandbox_policy(pid)
+        return 0
     }
     
     func getEnvironmentVariable(name: String) -> String? {
-        if hasKernelAccess {
-            if let cName = name.cString(using: .utf8) {
-                if let result = kfd_get_environment_variable(cName) {
-                    return String(cString: result)
-                }
-            }
-        } else {
-            if let cName = name.cString(using: .utf8) {
-                if let result = getenv(cName) {
-                    return String(cString: result)
-                }
+        if let cName = name.cString(using: .utf8) {
+            if let result = getenv(cName) {
+                return String(cString: result)
             }
         }
         return nil
     }
 }
 
-// C函数声明
-func kfd_initialize() -> Bool
-func kfd_get_kernel_access() -> Bool
-func kfd_read_kernel_memory(_ addr: UInt64, _ buffer: UnsafeMutablePointer<UInt8>, _ size: Int) -> Bool
-func kfd_write_kernel_memory(_ addr: UInt64, _ buffer: UnsafePointer<UInt8>, _ size: Int) -> Bool
-func kfd_get_proc_struct(_ pid: Int) -> UInt64
-func kfd_get_syscall_table() -> UInt64
-func kfd_get_vfs_mount_table() -> UInt64
-func kfd_get_sandbox_policy(_ pid: Int) -> UInt64
-func kfd_get_environment_variable(_ name: UnsafePointer<CChar>) -> UnsafeMutablePointer<CChar>?
+// 模拟C函数的Swift实现
+func getenv(_ name: UnsafePointer<CChar>) -> UnsafeMutablePointer<CChar>? {
+    return nil
+}
