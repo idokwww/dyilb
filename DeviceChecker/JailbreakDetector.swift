@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 struct JailbreakStatus {
     let status: String
