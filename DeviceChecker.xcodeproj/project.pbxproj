@@ -45,6 +45,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83B67FBD2B5A4FA200E3D36F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		13B07F901A680F5B00A75B9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 				13B07F951A680F5B00A75B9A /* AppDelegate.swift in Sources */,
 				13B07F971A680F5B00A75B9A /* SceneDelegate.swift in Sources */,
 				13B07F991A680F5B00A75B9A /* ContentView.swift in Sources */,
@@ -58,9 +75,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
 		83B67FBC2B5A4FA100E3D36F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -77,26 +91,29 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXFrameworksBuildPhase section */
-		83B67FBD2B5A4FA200E3D36F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
+/* Begin PBXResourcesBuildPhase section */
+		13B07F911A680F5B00A75B9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13B07F9B1A680F5B00A75B9A /* Assets.xcassets in Resources */,
+				13B07F9D1A680F5B00A75B9A /* LaunchScreen.storyboard in Resources */,
+				13B07F9F1A680F5B00A75B9A /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXFrameworksBuildPhase section */
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXGroup section */
 		13B07F8E1A680F5B00A75B9A = {
 			isa = PBXGroup;
 			children = (
 				13B07F931A680F5B00A75B9A /* DeviceChecker */,
-				13B07F911A680F5B00A75B9A /* Products */,
+				13B07F921A680F5B00A75B9A /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		13B07F911A680F5B00A75B9A /* Products */ = {
+		13B07F921A680F5B00A75B9A /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				13B07F901A680F5B00A75B9A /* DeviceChecker.app */,
@@ -128,10 +145,11 @@
 /* Begin PBXNativeTarget section */
 		13B07F8C1A680F5B00A75B9A /* DeviceChecker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "DeviceChecker" */;
+			buildConfigurationList = 13B07F941A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "DeviceChecker" */;
 			buildPhases = (
-				13B07F8E1A680F5B00A75B9A /* Frameworks */,
-				13B07F901A680F5B00A75B9A /* Resources */,
+				13B07F901A680F5B00A75B9A /* Sources */,
+				13B07F8F1A680F5B00A75B9A /* Frameworks */,
+				13B07F911A680F5B00A75B9A /* Resources */,
 			);
 			buildRules = (
 			);
@@ -142,9 +160,6 @@
 			productReference = 13B07F901A680F5B00A75B9A /* DeviceChecker.app */;
 			productType = "com.apple.product-type.application";
 		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXNativeTarget section */
 		83B67FBA2B5A4F9F00E3D36F /* DeviceCheckerDylib */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 83B67FBE2B5A4FA300E3D36F /* Build configuration list for PBXNativeTarget "DeviceCheckerDylib" */;
@@ -187,7 +202,7 @@
 				Base,
 			);
 			mainGroup = 13B07F8E1A680F5B00A75B9A;
-			productRefGroup = 13B07F911A680F5B00A75B9A /* Products */;
+			productRefGroup = 13B07F921A680F5B00A75B9A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -197,21 +212,8 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXSourcesBuildPhase section */
-		13B07F901A680F5B00A75B9A /* Resources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				13B07F9B1A680F5B00A75B9A /* Assets.xcassets in Resources */,
-				13B07F9D1A680F5B00A75B9A /* LaunchScreen.storyboard in Resources */,
-				13B07F9F1A680F5B00A75B9A /* Info.plist in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
 /* Begin XCBuildConfiguration section */
-		13B07F921A680F5B00A75B9A /* Debug */ = {
+		13B07F951A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -271,7 +273,7 @@
 			};
 			name = Debug;
 		};
-		13B07F931A680F5B00A75B9A /* Release */ = {
+		13B07F961A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -324,42 +326,6 @@
 			};
 			name = Release;
 		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		83B67FC12B5A4FA600E3D36F /* Build configuration list for PBXProject "DeviceChecker" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				13B07F921A680F5B00A75B9A /* Debug */,
-				13B07F931A680F5B00A75B9A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "DeviceChecker" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				13B07F921A680F5B00A75B9A /* Debug */,
-				13B07F931A680F5B00A75B9A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-
-/* Begin XCConfigurationList section */
-		83B67FBE2B5A4FA300E3D36F /* Build configuration list for PBXNativeTarget "DeviceCheckerDylib" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				83B67FBF2B5A4FA400E3D36F /* Debug */,
-				83B67FC02B5A4FA500E3D36F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-
-/* Begin XCBuildConfiguration section */
 		83B67FBF2B5A4FA400E3D36F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -466,6 +432,36 @@
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		83B67FC12B5A4FA600E3D36F /* Build configuration list for PBXProject "DeviceChecker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13B07F951A680F5B00A75B9A /* Debug */,
+				13B07F961A680F5B00A75B9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13B07F941A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "DeviceChecker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13B07F951A680F5B00A75B9A /* Debug */,
+				13B07F961A680F5B00A75B9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83B67FBE2B5A4FA300E3D36F /* Build configuration list for PBXNativeTarget "DeviceCheckerDylib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83B67FBF2B5A4FA400E3D36F /* Debug */,
+				83B67FC02B5A4FA500E3D36F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
 	};
 	rootObject = 13B07F8D1A680F5B00A75B9A /* Project object */;
 }
