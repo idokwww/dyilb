@@ -53,7 +53,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXGroup section */
-		83B67F9A2B5A4F1A00E3D36F /* Project object */ = {
+		83B67F9A2B5A4F1A00E3D36F = {
 			isa = PBXGroup;
 			children = (
 				83B67F9B2B5A4F1B00E3D36F /* DeviceChecker */,
@@ -103,14 +103,14 @@
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		83B67F992B5A4F1900E3D36F /* Project object */ = {
+		83B67F992B5A4F1900E3D36F = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1330;
 				ORGANIZATIONNAME = "Device Checker";
 			};
-			buildConfigurationList = 83B67FC12B5A4FA600E3D36F /* Build configuration list for PBXProject "DeviceChecker" */;
+			buildConfigurationList = 83B67FC12B5A4FA600E3D36F /* Build configuration list for PBXProject */;
 			compatibilityVersion = "Xcode 13.3";
 			dependencies = (
 			);
@@ -120,7 +120,7 @@
 				en,
 				Base,
 			);
-			mainGroup = 83B67F9A2B5A4F1A00E3D36F /* Project object */;
+			mainGroup = 83B67F9A2B5A4F1A00E3D36F;
 			productRefGroup = 83B67F9C2B5A4F1C00E3D36F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -239,7 +239,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		83B67FC12B5A4FA600E3D36F /* Build configuration list for PBXProject "DeviceChecker" */ = {
+		83B67FC12B5A4FA600E3D36F /* Build configuration list for PBXProject */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83B67FBF2B5A4FA400E3D36F /* Debug */,
@@ -259,5 +259,5 @@
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 83B67F992B5A4F1900E3D36F /* Project object */;
+	rootObject = 83B67F992B5A4F1900E3D36F;
 }
