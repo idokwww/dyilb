@@ -176,7 +176,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 13B07F8E1A680F5B00A75B9A /* Build configuration list for PBXProject "DeviceChecker" */;
+			buildConfigurationList = 83B67FC12B5A4FA600E3D36F /* Build configuration list for PBXProject "DeviceChecker" */;
 			compatibilityVersion = "Xcode 13.3";
 			dependencies = (
 			);
@@ -327,7 +327,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		13B07F8E1A680F5B00A75B9A /* Build configuration list for PBXProject "DeviceChecker" */ = {
+		83B67FC12B5A4FA600E3D36F /* Build configuration list for PBXProject "DeviceChecker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F921A680F5B00A75B9A /* Debug */,
