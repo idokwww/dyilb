@@ -188,6 +188,8 @@
 				DEVELOPMENT_TEAM = "";
 				CODE_SIGNING_REQUIRED = NO;
 				CODE_SIGNING_ALLOWED = NO;
+				CC = "$(CLANG)";
+				CFLAGS = "$(inherited) -Wno-error=implicit-function-declaration";
 			};
 			name = Debug;
 		};
@@ -249,6 +251,8 @@
 				DEVELOPMENT_TEAM = "";
 				CODE_SIGNING_REQUIRED = NO;
 				CODE_SIGNING_ALLOWED = NO;
+				CC = "$(CLANG)";
+				CFLAGS = "$(inherited) -Wno-error=implicit-function-declaration";
 			};
 			name = Release;
 		};
