@@ -28,7 +28,7 @@ jobs:
         find ./build -name "libDeviceCheckerDylib.dylib" -type f
     
     - name: Upload dylib artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: libDeviceCheckerDylib
         path: ./build/Release-iphoneos/libDeviceCheckerDylib.dylib
