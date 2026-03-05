@@ -1,0 +1,34 @@
+name: Build DeviceCheckerDylib
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup Xcode
+      uses: maxim-lobanov/setup-xcode@v1
+      with:
+        xcode-version: latest
+    
+    - name: Build DeviceCheckerDylib
+      run: |
+        xcodebuild -project DeviceChecker.xcodeproj -target DeviceCheckerDylib -configuration Release build
+    
+    - name: Find dylib file
+      run: |
+        find ./build -name "libDeviceCheckerDylib.dylib" -type f
+    
+    - name: Upload dylib artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: libDeviceCheckerDylib
+        path: ./build/Release-iphoneos/libDeviceCheckerDylib.dylib
