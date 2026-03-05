@@ -1,0 +1,10 @@
+[33mb3c5d4d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m Remove C files and update KFDManager to use Swift-only implementation
+[33m01d30f4[m Fix kfd.c syntax errors: remove duplicate includes, add missing functions
+[33m6dabb41[m Add C build rule to handle .c files
+[33m26fc78b[m Fix project file corruption: recreate project.pbxproj with clean structure
+[33mb2df7ac[m Add C build rule to handle .c files
+[33m8180350[m Add C compiler settings and flags to handle C files
+[33mae70f80[m Fix kfd.c syntax errors: remove extra closing brace and duplicate function definition
+[33m9ad35b6[m Fix module name issue: add MODULE_NAME and PRODUCT_MODULE_NAME settings
+[33mb92ff26[m Fix file paths: add DeviceChecker/ prefix to all file paths
+[33m688eec0[m Fix signing issues: disable code signing requirements
