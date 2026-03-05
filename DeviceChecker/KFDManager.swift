@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 class KFDManager {
     private var isInitialized = false
@@ -42,8 +43,13 @@ class KFDManager {
             return false
         }
         
-        let buffer = [UInt8](data)
-        return kfd_write_kernel_memory(addr, buffer, buffer.count)
+        return data.withUnsafeBytes { buffer in
+            if let baseAddress = buffer.baseAddress {
+                let uint8Buffer = baseAddress.assumingMemoryBound(to: UInt8.self)
+                return kfd_write_kernel_memory(addr, uint8Buffer, data.count)
+            }
+            return false
+        }
     }
     
     func getProcStruct(pid: Int) -> UInt64? {
@@ -76,20 +82,29 @@ class KFDManager {
     
     func getEnvironmentVariable(name: String) -> String? {
         if hasKernelAccess {
-            return kfd_get_environment_variable(name)
+            if let cName = name.cString(using: .utf8) {
+                if let result = kfd_get_environment_variable(cName) {
+                    return String(cString: result)
+                }
+            }
         } else {
-            return getenv(name)
+            if let cName = name.cString(using: .utf8) {
+                if let result = getenv(cName) {
+                    return String(cString: result)
+                }
+            }
         }
+        return nil
     }
 }
 
 // C函数声明
-extern func kfd_initialize() -> Bool
-extern func kfd_get_kernel_access() -> Bool
-extern func kfd_read_kernel_memory(_ addr: UInt64, _ buffer: UnsafeMutablePointer<UInt8>, _ size: Int) -> Bool
-extern func kfd_write_kernel_memory(_ addr: UInt64, _ buffer: UnsafePointer<UInt8>, _ size: Int) -> Bool
-extern func kfd_get_proc_struct(_ pid: Int) -> UInt64
-extern func kfd_get_syscall_table() -> UInt64
-extern func kfd_get_vfs_mount_table() -> UInt64
-extern func kfd_get_sandbox_policy(_ pid: Int) -> UInt64
-extern func kfd_get_environment_variable(_ name: String) -> String?
+func kfd_initialize() -> Bool
+func kfd_get_kernel_access() -> Bool
+func kfd_read_kernel_memory(_ addr: UInt64, _ buffer: UnsafeMutablePointer<UInt8>, _ size: Int) -> Bool
+func kfd_write_kernel_memory(_ addr: UInt64, _ buffer: UnsafePointer<UInt8>, _ size: Int) -> Bool
+func kfd_get_proc_struct(_ pid: Int) -> UInt64
+func kfd_get_syscall_table() -> UInt64
+func kfd_get_vfs_mount_table() -> UInt64
+func kfd_get_sandbox_policy(_ pid: Int) -> UInt64
+func kfd_get_environment_variable(_ name: UnsafePointer<CChar>) -> UnsafeMutablePointer<CChar>?
